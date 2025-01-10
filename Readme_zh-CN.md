@@ -696,10 +696,10 @@ program
 
 支持的事件有：
 
-- `preAction`：在本命令或其子命令的处理函数执行前
-- `postAction`：在本命令或其子命令的处理函数执行后
-
-钩子函数的参数为添加上钩子的命令，及实际执行的命令。
+| 事件名称 | 触发时机 | 参数列表 |
+| :-- | :-- | :-- |
+| `preAction`, `postAction` | 本命令或其子命令的处理函数执行前/后 |   `(thisCommand, actionCommand)` |
+| `preSubcommand` | 在其直接子命令解析之前调用  | `(thisCommand, subcommand)` |
 
 ## 自动化帮助信息
 
@@ -1059,7 +1059,7 @@ program
 
 ## 支持
 
-当前版本的 Commander 在 LTS 版本的 Node.js 上完全支持。并且至少需要 v12.20.0。
+当前版本的 Commander 在 LTS 版本的 Node.js 上完全支持。并且至少需要 v18。
 （使用更低版本 Node.js 的用户建议安装更低版本的 Commander）
 
 社区支持请访问项目的 [Issues](https://github.com/tj/commander.js/issues)。
